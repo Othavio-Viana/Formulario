@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/styles/styles.css">
+
+    
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>
+        Formulário
+    </title>
+</head>
+<body >
+        <main id="formulario">
+            <div id="container">
+
+                <div class="form-box login">
+                    <form action="" id="form-login">
+
+                        <div class="form-header">
+                            <h2>Login</h2>
+                            <i class="fa-solid fa-moon modo"></i>
+                        </div>
+
+                         <div class="input-box">
+
+                            <input type="text" name="nome" id="nome">
+                            <i class="fa-solid fa-user"></i>
+                            
+                            <label for="nome" class="label-input">Nome completo</label>
+                            
+
+                            <span class="error"></span>
+                         </div>
+
+                         <div class="input-box">
+
+                            <input type="password" name="senha" id="senha">
+                            <i class="fa-solid fa-lock"></i>
+
+                            <label for="senha" class="label-input">Senha</label>
+                            
+                            
+                            <span class="error"></span>
+                         </div>
+
+                         <div class="forgot-link">
+                            <a href="#">Esqueçeu sua senha?</a>
+                         </div>
+
+                         <button type="submit" class="btn">
+                            Login
+                         </button>
+
+                         <p>ou login com plataforma sociais</p>
+
+                         <div class="social-icons">
+                            <a href="#"><i class="fa-brands fa-google"></i></a>
+                            <a href="#"><i class="fa-solid fa-qrcode"></i></a>
+                         </div>
+
+                    </form>
+                </div>
+
+                <div class="form-box cadastro">
+                    <form action="none" id="form-cadastro">
+                        
+                        <div class="form-header">
+                         <h2>Cadastro</h2>
+                         <i class="fa-solid fa-moon modo"></i>
+                        </div>
+
+                         <div class="input-box">
+                            <input type="text" name="nome" id="nomecad">
+                            <i class="fa-solid fa-user"></i>
+
+                            <label for="nome" class="label-input">Nome completo</label>
+                            
+                            <span class="error"></span>
+                         </div>
+
+                         <div class="input-box">
+                            <input type="email" name="email" id="email">
+                            <i class="fa-solid fa-envelope"></i>
+
+                            <label for="email" class="label-input">Email</label>
+                            
+
+                            <span class="error"></span>
+                         </div>
+
+                         <div class="input-box">
+                            <input type="password" name="senha" id="senhacad">
+                            <i class="fa-solid fa-lock"></i>
+
+                            <label for="senha" class="label-input">Senha</label>
+                            
+
+                            <span class="error"></span>
+                         </div>
+
+                         <button type="submit" class="btn">
+                            Cadastro
+                         </button>
+
+                         <p>ou cadastro com plataforma sociais</p>
+
+                         <div class="social-icons">
+                            <a href="#"><i class="fa-brands fa-google"></i></a>
+                            <a href="#"><i class="fa-solid fa-qrcode"></i></a>
+                         </div>
+
+                    </form>
+                </div>
+
+                <div class="toggle-box">
+                    <div class="toggle-panel toggle-left">
+                        <h1>Olá, bem-vindo!</h1>
+                        <p>Não possui uma conta?</p>
+                        <button class="btn cadastro-btn">
+                            Cadastrar 
+                        </button>
+                    </div>
+
+                    <div class="toggle-panel toggle-right">
+                        <h1>Você voltou!</h1>
+                        <p>Já possui uma conta?</p>
+                        <button class="btn login-btn">
+                            Login
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+
+<!-- Modal de Sucesso Login -->
+<div id="successModalLogin" class="modal-overlay">
+  <div class="modal-box">
+
+    <i class="fa-regular fa-circle-check"></i>
+    <br>
+    <h2>Bem-vindo de volta!</h2>
+    <br>
+    <p>Login foi realizado com sucesso!</p>
+
+    <button type="button" onclick="closeModal()">Continuar</button>
+
+  </div>
+</div>
+
+<!-- Modal de Sucesso Cadastro -->
+<div id="successModalCad" class="modal-overlay">
+  <div class="modal-box">
+
+    <i class="fa-regular fa-circle-check"></i>
+    <br>
+    <h2>Seja bem-vindo!</h2>
+    <br>
+    <p>Cadastro realizado com sucesso!</p>
+
+    <button type="button" onclick="closeModal2()">Continuar</button>
+
+  </div>
+</div>
+
+<!-- Modal de Erro Login p/Dispositivos c/- de 830 height -->
+<div id="errorModal" class="modal-overlay-error">
+  <div class="modal-box-error">
+
+    <i class="fa-solid fa-exclamation"></i>
+    <br>
+    <h2>Opa!</h2>
+    <br>
+    <p>Nome precisa ter mais que 3 caracteres, e não pode conter somente números</p>
+    <p>Senha precisa possuir 8 caracteres, 1 letra maiúscula e minúscula, e um número</p>
+
+    <button type="button" onclick="closeModal3()">Ok</button>
+
+  </div>
+</div>
+
+
+    <script src="src/javascript/script.js"></script>
+</body>
+</html>
